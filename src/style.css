@@ -1,0 +1,56 @@
+
+@font-face {
+  font-family: 'Sora';
+  src: url('./fonts/Sora/Sora-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+
+  --font-sora: 'Sora';
+
+  --white: #FFFFFF;
+  --neutral-400: #949497;
+  --neutral-500: #717178;
+  --neutral-800: #262626;
+  --neutral-900: #121212;
+
+  --blue-400: #4CA6FF;
+  --blue-600: #177DFF;
+
+  --red-500: #D64D5B;
+  --green-500: #4DD67B;
+  --yellow-400: #F4DC73;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/*? UTILIDADES */
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  background-color: var(--neutral-900);
+  font-family: var(--font-sora);
+}
+
