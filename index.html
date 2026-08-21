@@ -1,28 +1,120 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="favicon/png" href="/images/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Typing speed test</title>
-  </head>
-  <body>
-    <div id="app">
-      <header class="header">
-        <picture>
-          <source media="(min-width: 768px)" srcset="/images/logo-large.svg">
-          <img src="/images/logo-small.svg" alt="logo">
-        </picture>
-        <div class="personal__best">
-          <img src="/images/icon-personal-best.svg" alt="personal best">
-          <div class="personal__best-value">
-            <span class="personal__best-desk">Personal best:</span>
-            <span class="personal__best-movi">Best:</span>
-            <span class="personal__wpm">0 WPM</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="favicon/png" href="/images/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing speed test</title>
+</head>
+
+<body>
+  <div id="app">
+
+    <header class="header">
+      <picture>
+        <source media="(min-width: 768px)" srcset="/images/logo-large.svg">
+        <img src="/images/logo-small.svg" alt="logo">
+      </picture>
+      <div class="personal__best">
+        <img src="/images/icon-personal-best.svg" alt="personal best">
+        <div class="personal__best-value">
+          <span class="personal__best-desk">Personal best:</span>
+          <span class="personal__best-movi">Best:</span>
+          <span class="personal__wpm">0 WPM</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="controls-container">
+        <div class="stats">
+          <div class="stats__item">
+            <span class="stats__label">WPM:</span>
+            <span class="stats__value" data-stat="wpm">0</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__label">Accuracy:</span>
+            <span class="stats__value" data-stat="accuracy">0%</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__label">Time:</span>
+            <span class="stats__value" data-stat="time">30s</span>
           </div>
         </div>
-      </header>
-    </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+        <div class="settings">
+          <!--  Difficulty dropdown (MOBILE)  -->
+          <div class="difficulty-mobile" data-dropdown="difficulty">
+            <button type="button" class="dropdown__toggle" data-dropdown-toggle>
+              <span data-dropdown-label>Hard</span>
+              <img src="/images/icon-down-arrow.svg" alt="down arrow">
+            </button>
+            
+            <div class="dropdown__menu" data-dropdown-menu>
+              <div class="checkbox__dropdown">
+                <label>
+                  <input type="radio" name="difficulty" value="easy" checked>
+                  Easy
+                </label>
+              </div>
+              <div class="checkbox__dropdown">
+                <label>
+                  <input type="radio" name="difficulty" value="medium">
+                  Medium
+                </label>
+              </div>
+              <div class="checkbox__dropdown">
+                <label>
+                  <input type="radio" name="difficulty" value="hard">
+                  Hard
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mode dropdown (MOBILE) -->
+          <div class="time-mobile" data-dropdown="mode">
+            <button type="button" class="dropdown__toggle" data-dropdown-toggle>
+              <span data-dropdown-label>Timed (60s)</span>
+              <img src="/images/icon-down-arrow.svg" alt="down arrow">
+            </button>
+            <div class="dropdown__menu" data-dropdown-menu>
+              <div class="checkbox__dropdown">
+                <label>
+                  <input type="radio" name="mode" value="timed" checked>
+                  Timed (60s)
+                </label>
+              </div>
+              <div class="checkbox__dropdown">
+                <label>
+                  <input type="radio" name="mode" value="passage">
+                  Passage
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- TABLET & DESKTOP -->
+           <div class="difficulty__large">
+            <p class="difficulty__title">Difficulty:</p>
+            <div class="btn__difficulty">
+              <button class="btns isActive" type="button">Easy</button>
+              <button class="btns" type="button">Medium</button>
+              <button class="btns" type="button">Hard</button>
+            </div>
+          </div>
+          
+          <div class="time__large">
+             <p class="difficulty__title">Mode:</p>
+             <div class="btn__difficulty">
+               <button class="btns isActive" type="button">Timed (60s)</button>
+               <button class="btns" type="button">Passage</button>
+             </div>
+           </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
