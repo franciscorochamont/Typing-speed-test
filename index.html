@@ -49,7 +49,7 @@
               <span data-dropdown-label>Hard</span>
               <img src="/images/icon-down-arrow.svg" alt="down arrow">
             </button>
-            
+
             <div class="dropdown__menu" data-dropdown-menu>
               <div class="checkbox__dropdown">
                 <label>
@@ -71,7 +71,7 @@
               </div>
             </div>
           </div>
-          
+
           <!-- Mode dropdown (MOBILE) -->
           <div class="time-mobile" data-dropdown="mode">
             <button type="button" class="dropdown__toggle" data-dropdown-toggle>
@@ -94,7 +94,7 @@
             </div>
           </div>
           <!-- TABLET & DESKTOP -->
-           <div class="difficulty__large">
+          <div class="difficulty__large">
             <p class="difficulty__title">Difficulty:</p>
             <div class="btn__difficulty">
               <button class="btns isActive" type="button">Easy</button>
@@ -102,19 +102,44 @@
               <button class="btns" type="button">Hard</button>
             </div>
           </div>
-          
+
           <div class="time__large">
-             <p class="difficulty__title">Mode:</p>
-             <div class="btn__difficulty">
-               <button class="btns isActive" type="button">Timed (60s)</button>
-               <button class="btns" type="button">Passage</button>
-             </div>
-           </div>
+            <p class="difficulty__title">Mode:</p>
+            <div class="btn__difficulty">
+              <button class="btns isActive" type="button">Timed (60s)</button>
+              <button class="btns" type="button">Passage</button>
+            </div>
+          </div>
         </div>
       </div>
+      <!-- Contenedor del texto objetivo  -->
+      <div class="text-container" aria-label="Texto para practicar mecanografia">
+        <div class="word__container">
+          <span class="word">
+            <span class="char correct">H</span>
+            <span class="char incorrect">o</span>
+            <span class="char incorrect">l</span>
+            <span class="char current">a</span>
+          </span>
+          <span class="word">
+            <span class="char">m</span>
+            <span class="char">u</span>
+            <span class="char">n</span>
+            <span class="char">d</span>
+            <span class="char">o</span>
+          </span>
+        </div>
+        <div class="button-container">
+          <button class="button_start">Start Typing Test</button>
+          <p class="click__text">Or click the text and start typing</p>
+        </div>
+      </div>
+      <input type="text" class="hidden-input" id="typing-input" autocomplete="off" autocapitalize="off" spellcheck="false" />
+    
     </main>
 
   </div>
   <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
