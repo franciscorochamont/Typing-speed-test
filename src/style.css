@@ -54,6 +54,15 @@ body{
   background-color: var(--neutral-900);
   font-family: var(--font-sora);
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#app{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 @media(min-width: 768px){
@@ -127,6 +136,10 @@ body{
 
 .content{
   margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  flex: 1;
 }
 
 @media(min-width: 768px){
@@ -371,6 +384,102 @@ label{
   color: var(--blue-400);
 }
 
+/** Contenido del texto */
 
+.text-container{
+  width: 100%;
+  flex: 1;
+  position: relative;
+  cursor: default;
+  outline: none;
+  user-select: none;
+  font-family: var(--font-sora);
+  font-size: 3.2rem;
+  font-weight: 400;
+  text-align: left;
+  color: var(--neutral-400);
+}
 
+@media(min-width: 768px){
+  .text-container{
+    font-size: 4rem;
+  }
+}
+
+.word__container{
+  filter: blur(10px);
+}
+
+.word {
+  display: inline-block; /* mantiene las palabras unidas */
+  margin-right: 0.6em;   /* espacio entre palabras */
+}
+
+.char {
+  display: inline;
+  transition: color 0.1s;
+}
+
+.char.correct {
+  color: var(--green-500); /* verde */
+}
+
+.char.incorrect {
+  color: var(--red-500); /* rojo */
+  text-decoration: underline;
+}
+
+.char.current {
+  background-color: var(--neutral-500); /* resalta la letra actual */
+  border-radius: 5px;
+}
+
+/* Input invisible que captura todo el teclado */
+.hidden-input {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+}
+
+.button-container{
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.button_start{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-family: var(--font-sora);
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 1.2rem;
+  padding: 1.6rem 2.4rem;
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--blue-600);
+  transition: all 300ms;
+}
+
+.button_start:hover{
+  background-color: var(--blue-400);
+}
+
+.click__text{
+  font-family: var(--font-sora);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--white);
+}
 
