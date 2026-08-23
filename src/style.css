@@ -288,7 +288,7 @@ body{
 }
 
 .dropdown__menu{
-  display: flex;
+  display: none;
   border-radius: .8rem;
   flex-direction: column;
   position: absolute;
@@ -297,6 +297,10 @@ body{
   width: 100%;
   z-index: 10;
   background-color: var(--neutral-800);
+}
+
+.dropdown__menu.isOpen{
+  display: flex;
 }
 
 .checkbox__dropdown{
