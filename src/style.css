@@ -414,6 +414,10 @@ label{
   filter: blur(10px);
 }
 
+.word__container.isStart{
+  filter: blur(0px);
+}
+
 .word {
   display: inline-block; /* mantiene las palabras unidas */
   margin-right: 0.6em;   /* espacio entre palabras */
@@ -456,6 +460,10 @@ label{
   justify-content: center;
   position: absolute;
   inset: 0;
+}
+
+.button-container.isHidden{
+  display: none;
 }
 
 .button_start{
