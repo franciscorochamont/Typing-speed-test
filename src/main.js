@@ -7,7 +7,6 @@ function initialApp(){
   console.log('Initial App 🥑')
   initDropdowns()
   startTyping()
-  textDificult('easy')
 }
 
 initialApp()
