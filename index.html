@@ -46,7 +46,7 @@
           <!--  Difficulty dropdown (MOBILE)  -->
           <div class="difficulty-mobile" data-dropdown="difficulty">
             <button type="button" class="dropdown__toggle" data-dropdown-toggle aria-expanded="false">
-              <span data-dropdown-label>Hard</span>
+              <span data-dropdown-label>Easy</span>
               <img src="/images/icon-down-arrow.svg" alt="down arrow">
             </button>
 
@@ -75,7 +75,7 @@
           <!-- Mode dropdown (MOBILE) -->
           <div class="time-mobile" data-dropdown="mode">
             <button type="button" class="dropdown__toggle" data-dropdown-toggle aria-expanded="false">
-              <span data-dropdown-label>Timed (60s)</span>
+              <span data-dropdown-label-mode>Timed (60s)</span>
               <img src="/images/icon-down-arrow.svg" alt="down arrow">
             </button>
             <div class="dropdown__menu" data-dropdown-menu>
@@ -97,17 +97,17 @@
           <div class="difficulty__large">
             <p class="difficulty__title">Difficulty:</p>
             <div class="btn__difficulty">
-              <button class="btns isActive" type="button">Easy</button>
-              <button class="btns" type="button">Medium</button>
-              <button class="btns" type="button">Hard</button>
+              <button class="btns isActive" type="button" value="easy">Easy</button>
+              <button class="btns" type="button" value="medium">Medium</button>
+              <button class="btns" type="button" value="hard">Hard</button>
             </div>
           </div>
 
           <div class="time__large">
             <p class="difficulty__title">Mode:</p>
             <div class="btn__difficulty">
-              <button class="btns isActive" type="button">Timed (60s)</button>
-              <button class="btns" type="button">Passage</button>
+              <button class="btns isActive" type="button" value="timed">Timed (60s)</button>
+              <button class="btns" type="button" value="passage">Passage</button>
             </div>
           </div>
         </div>
@@ -135,7 +135,7 @@
         </div>
       </div>
       <input type="text" class="hidden-input" id="typing-input" autocomplete="off" autocapitalize="off" spellcheck="false" />
-    
+
     </main>
 
   </div>
